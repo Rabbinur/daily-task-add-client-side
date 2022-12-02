@@ -100,10 +100,10 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">PhotoURL</span>
+                  <span className="label-text">Photo</span>
                 </label>
                 <input
-                  type="text"
+                  type="file"
                   name="photoURL"
                   placeholder="PhotoURL"
                   className="input input-bordered"

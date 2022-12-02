@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/tasks"),
+        loader: () => fetch("https://task-server-rabbinur.vercel.app/tasks"),
       },
       {
         path: "/userDetails",
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
             <UserDetails></UserDetails>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/tasks"),
+        loader: () => fetch("https://task-server-rabbinur.vercel.app/tasks"),
       },
       {
         path: "/tasks",

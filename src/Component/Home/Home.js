@@ -35,7 +35,6 @@ const Home = () => {
           <button className="btn  btn-outline btn-ghost mr-3">Circle</button>
         </a>
       </div>
-
       <div>
         <h2 className="text-center mt-10 text-lg ">
           Here is the All the tasks
@@ -74,6 +73,7 @@ const Home = () => {
           </tfoot>
         </table>
       </div>
+      di
     </div>
   );
 };

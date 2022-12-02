@@ -14,7 +14,7 @@ const UserTasks = () => {
     console.log(users);
 
     //fetching data store to server
-    fetch("http://localhost:5000/tasks", {
+    fetch("https://task-server-rabbinur.vercel.app/tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
