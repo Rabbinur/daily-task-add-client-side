@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TableCreate from "../TableCreate/TableCreate";
 import UserTasks from "../UserTasks/UserTasks";
-
+import { motion, AnimatePresence } from "framer-motion";
 const Home = () => {
   const tasks = useLoaderData();
   // const [displaytasks, setDisplaytasks] = useState(tasks);
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <h4 className="text-center text-4xl mb-10">
         Hey User.. !! Add Your Daily Tasks
       </h4>
@@ -74,7 +78,7 @@ const Home = () => {
         </table>
       </div>
       di
-    </div>
+    </motion.div>
   );
 };
 

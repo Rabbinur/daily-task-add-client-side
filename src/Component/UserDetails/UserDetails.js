@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import TableCreate from "../TableCreate/TableCreate";
-
+import { motion } from "framer-motion";
 const UserDetails = () => {
   const [date, setDate] = useState();
 
@@ -24,13 +24,13 @@ const UserDetails = () => {
     ":" +
     showDate.getSeconds();
   return (
-    <div>
+    <motion.div animate={{ x: [0, 100, 0] }}>
       <div className="grid grid-cols-1 lg:grid-cols-2 border-2 border-blue-400">
         {" "}
         <div className="flex content-center justify-center">
           <img src={user?.photoURL} className="rounded" alt="" />
         </div>
-        <div>
+        <motion.div animate={{ x: [0, 100, 0] }}>
           <h2 className="text-4xl mt-4"> Name: {user?.displayName}</h2>
           <h2 className="text-3xl mt-4">UID: {user?.uid}</h2>
           <p className="text-2xl mt-3">
@@ -46,7 +46,7 @@ const UserDetails = () => {
               onChange={(e) => setDate(e.target.value)}
             />
           </p> */}
-        </div>
+        </motion.div>
       </div>
       <div>
         <h2 className="text-center text-4xl mt-4">Total works status</h2>
@@ -84,7 +84,7 @@ const UserDetails = () => {
           </tfoot>
         </table>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
